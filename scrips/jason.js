@@ -19,7 +19,7 @@ window.onscroll = () => {
 
 var typed = new Typed(".input",{
     strings:[
-        "Backend Developer.","Mobile Developer."
+        "Backend Developer.","Mobile App Developer."
     ],
     typeSpeed:120,
     backSpeed: 70,
