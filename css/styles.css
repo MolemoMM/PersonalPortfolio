@@ -280,7 +280,7 @@ header.sticky {
 
 /* Services section title */
 h1.service_section {
-    margin-top: 15rem;
+    margin-top: 0rem;
     color: var(--ann-color);
     font-size: 50px;
     padding-top: 100px;
