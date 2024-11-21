@@ -1,6 +1,6 @@
 Website Link: https://molemomm.github.io/PersonalPortfolio/
 # Personal Portfolio
-This project is a personal portfolio website designed to showcase the work and contact information of Molemo Mamashela. Below is a detailed description of each file and its purpose within the project.
+This project is my personal portfolio website designed to showcase my work and contact information. Below is a detailed description of each file and its purpose within the project.
 
 ## Project Structure
 
