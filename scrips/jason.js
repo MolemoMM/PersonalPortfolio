@@ -27,7 +27,21 @@ var typed = new Typed(".input",{
 
 });
 
+    document.querySelectorAll('.read-more-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.service_card');
+            card.querySelector('.more-text').style.display = 'inline';
+            button.style.display = 'none';
+            card.querySelector('.show-less-btn').style.display = 'inline';
+        });
+    });
 
-
-
+    document.querySelectorAll('.show-less-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.service_card');
+            card.querySelector('.more-text').style.display = 'none';
+            button.style.display = 'none';
+            card.querySelector('.read-more-btn').style.display = 'inline';
+        });
+    });
 

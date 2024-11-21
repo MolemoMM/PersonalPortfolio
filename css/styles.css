@@ -308,6 +308,11 @@ div.card {
     padding: 30px;
     border-radius: 10px;
     transition: .5s ease;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover effect for service cards */
@@ -570,6 +575,30 @@ form .submit-btn:hover {
     font-size: 22px;
 }
 
+/* Style for the buttons */
+.read-more-btn, .show-less-btn {
+    background-color: var(--bg-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border-radius: 13px;
+}
+
+.read-more-btn:hover, .show-less-btn:hover {
+    
+    background-color: var(--bg-color);
+}
+
+/* Hide the additional content initially */
+.more-text {
+    display: none;
+}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 1580px) {
     header {
@@ -726,4 +755,3 @@ form .submit-btn:hover {
         font-size: 13px;
     }
 }
-
