@@ -365,6 +365,7 @@ div.card {
   
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto)); /* Responsive columns */
+    gap: 2rem; /* Gap between grid items */
     margin-top: 5rem;
 }
 
