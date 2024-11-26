@@ -27,7 +27,7 @@ var typed = new Typed(".input",{
 
 });
 
-    document.querySelectorAll('.read-more-btn').forEach(button => {
+ document.querySelectorAll('.read-more-btn').forEach(button => {
         button.addEventListener('click', () => {
             const card = button.closest('.service_card');
             card.querySelector('.more-text').style.display = 'inline';
