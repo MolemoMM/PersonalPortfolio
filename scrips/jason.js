@@ -45,3 +45,5 @@ var typed = new Typed(".input",{
         });
     });
 
+/* chatbot */
+
