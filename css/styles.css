@@ -65,14 +65,29 @@ header {
     margin: 0 30px; /* Space between menu items */
     transition: all .6s ease; /* Smooth hover transition */
 }
+.menulist2 a {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--other-color); /* Secondary text color */
+    margin: 0 30px; /* Space between menu items */
+    transition: all .6s ease; /* Smooth hover transition */
+}
 
 /* Menu item hover effect */
 .menulist a:hover {
     color: var(--text-color); /* Change text color on hover */
 }
+.menulist2 a:hover {
+    color: var(--text-color); /* Change text color on hover */
+}
 
 /* Active menu item effect */
 .menulist a:active {
+    color: var(--text-color); /* Keep the color on active state */
+}
+
+.menulist2 a:active {
     color: var(--text-color); /* Keep the color on active state */
 }
 
