@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { question: 'how are you', answer: 'I am just a bot, but I am doing great! How about you?' },
         { question: 'what is your name', answer: 'I am your friendly chatbot.' },
         { question: 'bye', answer: 'Goodbye! Have a great day!' }
+        { question: 'what what can you tell me about this profile', answer: 'This is Molemo Mamashela"s Personal Portfolio showcasing his skills, experience, and projects. It serves as an online resume, allowing visitors to get a deeper understanding of who he is and what he can do. The portfolio includes a Home, About Me, Services, Portfolio And Contact Page.' },
     ];
 
     // Show the chatbot when the button is clicked

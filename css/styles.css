@@ -793,6 +793,10 @@ form .submit-btn:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#chatbot-button:hover {
+    transform: scale(1.07);
+}
+
 #chatbot {
     position: fixed;
     bottom: 80px;
