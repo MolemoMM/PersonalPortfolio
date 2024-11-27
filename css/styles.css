@@ -781,6 +781,7 @@ form .submit-btn:hover {
     right: 20px;
     background-color: var(--main-color);
     color: white;
+    
     border: none;
     border-radius: 50%;
     width: 60px;

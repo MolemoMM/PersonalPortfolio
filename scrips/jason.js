@@ -115,5 +115,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Example of adding a new response
     addChatbotResponse('what is your favorite color', 'I love all colors equally!');
     addChatbotResponse('tell me a joke', 'Why don’t scientists trust atoms? Because they make up everything!');
-    addChatbotResponse('yourself', 'I love all colors equally!');
 });
