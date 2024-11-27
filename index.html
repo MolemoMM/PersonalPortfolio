@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,
     FILL,GRAD@48,400,0,0 ">
-   
+    <link rel="stylesheet" href="chatbot.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
   
@@ -300,8 +301,27 @@
     <!---js file -->
     <script src="scrips/jason.js"></script>
 
-   
+    <!-- Chatbot Floating Button -->
+    <button id="chatbot-button">
+        <i class="material-icons">smart_toy</i>
+    </button>
 
-   
+    <!-- Chatbot -->
+    <div id="chatbot">
+        <div id="chatbot-header">
+            <h3>Chatbot</h3>
+            <button id="close-chatbot">X</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <input type="text" id="chatbot-input" placeholder="Type a message...">
+        <button id="send-chatbot">Send</button>
+    </div>
+
+    <!-- Link to chatbot CSS -->
+    <link rel="stylesheet" href="chatbot.css">
+
+    <!-- Link to chatbot JavaScript -->
+    <script src="chatbot.js"></script>
+
 </body>
 </html>
