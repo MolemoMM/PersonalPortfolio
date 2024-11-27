@@ -57,10 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Predefined responses
     const responses = [
         { question: 'hello', answer: 'Hi there! How can I help you today?' },
+        { question: 'hi', answer: 'Hi there! How can I help you today?' },
         { question: 'how are you', answer: 'I am just a bot, but I am doing great! How about you?' },
-        { question: 'what is your name', answer: 'I am your friendly chatbot.' },
-        { question: 'bye', answer: 'Goodbye! Have a great day!' }
-        { question: 'what what can you tell me about this profile', answer: 'This is Molemo Mamashela"s Personal Portfolio showcasing his skills, experience, and projects. It serves as an online resume, allowing visitors to get a deeper understanding of who he is and what he can do. The portfolio includes a Home, About Me, Services, Portfolio And Contact Page.' },
+        { question: 'what is your name', answer: 'I am your friendly Reggie.' },
+        { question: 'How can i contact ', answer: 'You can get in touch with Molemo by reaching him through Contact details: 064 315 6461 or Email Adress: mamashelamolemo@gmail.com or navigate to the Contact Page for more information' },
+        { question: 'about Page', answer: 'Molemo Mamashela is an aspiring software engineer from Johannesburg, Gauteng, with a passion for solving complex problems and creating innovative solutions through technology. Excited by the process of building systems from scratch  You can read through the about page to find out more' },
+        { question: 'tell me about this profile', answer:'This is Molemo Mamashela"s Personal Portfolio showcasing his skills, experience, and projects. It serves as an online resume, allowing visitors to get a deeper understanding of who he is and what he can do. The portfolio includes a Home, About Me, Services, Portfolio And Contact Page.'},
     ];
 
     // Show the chatbot when the button is clicked
@@ -113,4 +115,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Example of adding a new response
     addChatbotResponse('what is your favorite color', 'I love all colors equally!');
     addChatbotResponse('tell me a joke', 'Why don’t scientists trust atoms? Because they make up everything!');
+    addChatbotResponse('yourself', 'I love all colors equally!');
 });
