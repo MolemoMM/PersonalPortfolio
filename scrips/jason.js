@@ -56,10 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Predefined responses
     const responses = [
-        { question: 'hello', answer: 'Hi there! How can I help you today?' },
-        { question: 'how are you', answer: 'I am just a bot, but I am doing great! How about you?' },
-        { question: 'what is your name', answer: 'I am your friendly chatbot.' },
-        { question: 'bye', answer: 'Goodbye! Have a great day!' }
+        { keywords: ['hello', 'hi', 'helo', 'sho','awe', 'hy'], answer: 'Hi there! How can I help you today?' },
+        { keywords: ['how are you'], answer: 'I am just a bot, but I am doing great! How about you?' },
+        { keywords: ['name'], answer: 'I am your friendly Ravyn.' },
+        { keywords: ['contact'], answer: 'You can get in touch with Molemo by reaching him through Contact details: 064 315 6461 or Email Address: mamashelamolemo@gmail.com or navigate to the Contact Page for more information' },
+        { keywords: ['about page'], answer: 'Molemo Mamashela is an aspiring software engineer from Johannesburg, Gauteng, with a passion for solving complex problems and creating innovative solutions through technology. Excited by the process of building systems from scratch. You can find out more about him by going through the About Page.' },
+        { keywords: ['tell me about this profile'], answer: 'This is Molemo Mamashela\'s Personal Portfolio showcasing his skills, experience, and projects. It serves as an online resume, allowing visitors to get a deeper understanding of who he is and what he can do. The portfolio includes a Home, About Me, Services, Portfolio, and Contact Page.' },
+        { keywords: ['Services'], answer: 'The Main Services that molemo provides are Web Development, Mobile Development, and Backend Development and extra services that he provides outside coding are IT Support for more information please turn to the Services Page' },
+        { keywords: ['Project'], answer: 'No projects have been pulished yet though I can assure you, will be contacted once they have been, just fill the form on the contact page ;)' },
     ];
 
     // Show the chatbot when the button is clicked
@@ -100,16 +104,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Generate a response from the chatbot
     function getChatbotResponse(message) {
         const lowerCaseMessage = message.toLowerCase();
-        const response = responses.find(r => r.question === lowerCaseMessage);
-        return response ? response.answer : 'I am not sure how to respond to that.';
+        for (const response of responses) {
+            for (const keyword of response.keywords) {
+                if (lowerCaseMessage.includes(keyword.toLowerCase())) {
+                    return response.answer;
+                }
+            }
+        }
+        return 'I am not sure how to respond to that.';
     }
 
     // Function to add new responses
-    function addChatbotResponse(question, answer) {
-        responses.push({ question: question.toLowerCase(), answer: answer });
+    function addChatbotResponse(keywords, answer) {
+        responses.push({ keywords: keywords.map(keyword => keyword.toLowerCase()), answer: answer });
     }
 
     // Example of adding a new response
-    addChatbotResponse('what is your favorite color', 'I love all colors equally!');
-    addChatbotResponse('tell me a joke', 'Why don’t scientists trust atoms? Because they make up everything!');
+    addChatbotResponse(['favorite color'], 'I love all colors equally!');
+    addChatbotResponse(['joke'], 'Why don’t scientists trust atoms? Because they make up everything!');
+    addChatbotResponse(['Programmed'], 'I was programmed Braamfotein, Johanessburg, South Africa by Molemo Mamashela');
+    addChatbotResponse(['eat'], 'I do not eat, though I am powered by electricity, what do you eat?');
+    addChatbotResponse(['I eat'], 'Sounds delicious, I wish I could eat too, but I am just a bot');
+   
 });
