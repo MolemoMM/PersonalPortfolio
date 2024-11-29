@@ -195,7 +195,7 @@ section {
 /* Hover effect for social icons */
 .social-icons a:hover {
     transform: scale(1.06) rotate3d(0, 0, 1, 360deg); /* Scale and rotate on hover */
-    color: var(--text-color);
+    color: var (--text-color);
 }
 
 /* Home section button container */
@@ -781,7 +781,6 @@ form .submit-btn:hover {
     right: 20px;
     background-color: var(--main-color);
     color: white;
-    
     border: none;
     border-radius: 50%;
     width: 60px;
@@ -874,5 +873,56 @@ form .submit-btn:hover {
 }
 
 .message:nth-child(odd) {
-    background-color:var(--second-bg-color);
+    background-color: var(--second-bg-color);
+}
+ 
+/* thinking indicator */
+
+.thinking-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-style: italic;
+    color: var(--main-color);
+}
+
+.thinking-indicator::after {
+    content: '...';
+    animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        color: rgba(0,0,0,0);
+        text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    40% {
+        color: black;
+        text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    60% {
+        text-shadow:
+            .25em 0 0 black,
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    80%, 100% {
+        text-shadow:
+            .25em 0 0 black,
+            .5em 0 0 black;
+    }
+}
+
+.thinking-indicator i {
+    margin-right: 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
