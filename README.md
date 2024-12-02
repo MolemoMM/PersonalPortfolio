@@ -5,7 +5,7 @@ Website Link: https://molemomm.github.io/PersonalPortfolio/
 
 # How to clone the repository to your local
 - **Install Git**
-- **Copy the repository URL**: https://molemomm.github.io/PersonalPortfolio/
+- **Copy the repository URL**: https://github.com/MolemoMM/PersonalPortfolio
 - **Open the command prompt**
 - **Clone the repository**
 - **Navigate to the repository**

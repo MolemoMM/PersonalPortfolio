@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatbotMessages = document.getElementById('chatbot-messages');
     const chatbotInput = document.getElementById('chatbot-input');
     const sendChatbot = document.getElementById('send-chatbot');
+    let chatStarted = false;
 
     // Predefined responses
     const responses = [
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { keywords: ['LinkedIn','social media'], answer: 'You can follow Molemo on LinkedIn:http://www.linkedin.com/in/molemomamashela-19073624' },
         { keywords: ['availability'], answer: 'Molemo is currently available for new projects and consultations. Feel free to reach out through the Contact Page.' },
         { keywords: ['languages'], answer: 'Molemo speaks English and Sesotho fluently.' },
-        { keywords: ['CV'], answer: 'You can download Molemo\'s CV from the Resume Page to get a detailed overview of his skills, experience, and education.' },
+        { keywords: ['CV'], answer: 'You can download Molemo\'s resume from the Resume Page to get a detailed overview of his skills, experience, and education.' },
         { keywords: ['certifications'], answer: 'Molemo has earned certifications in web development, mobile development, and cloud computing. You can find more details on the Certifications Page.' },
         { keywords: ['partnerships'], answer: 'Molemo is open to partnerships and collaborations. If you have a project in mind, reach out through the Contact Page.' },
         { keywords: ['support'], answer: 'If you need support or have any questions, feel free to reach out through the Contact Page..' }
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     chatbotButton.addEventListener('click', function() {
         chatbot.style.display = 'flex';
         chatbotButton.style.display = 'none';
+        showGreeting();
     });
 
     // Close the chatbot
@@ -90,10 +92,23 @@ document.addEventListener('DOMContentLoaded', function() {
         chatbotButton.style.display = 'flex';
     });
 
+    // Show greeting animation
+    function showGreeting() {
+        const greetingElement = document.createElement('div');
+        greetingElement.classList.add('message', 'greeting');
+        greetingElement.innerHTML = '<strong>Ravyn:</strong> Welcome! How can I assist you today?';
+        chatbotMessages.appendChild(greetingElement);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
     // Send a message
     function sendMessage() {
         const message = chatbotInput.value;
         if (message.trim() !== '') {
+            if (!chatStarted) {
+                removeGreeting();
+                chatStarted = true;
+            }
             addMessage('You', message);
             chatbotInput.value = '';
 
@@ -108,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 const response = getChatbotResponse(message);
                 chatbotMessages.removeChild(thinkingIndicator);
-                addMessage('Chatbot', response);
+                addMessage('<i class="ri-robot-2-line"></i>', response);
             }, 1000);
         }
     }
@@ -129,6 +144,14 @@ document.addEventListener('DOMContentLoaded', function() {
         messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
         chatbotMessages.appendChild(messageElement);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    // Remove greeting message
+    function removeGreeting() {
+        const greetingElement = document.querySelector('.greeting');
+        if (greetingElement) {
+            chatbotMessages.removeChild(greetingElement);
+        }
     }
 
     // Generate a response from the chatbot
