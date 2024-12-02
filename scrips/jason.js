@@ -213,4 +213,4 @@ document.addEventListener('DOMContentLoaded', function() {
     addChatbotResponse(['eat'], 'I do not eat, though I am powered by electricity. What do you eat?');
     addChatbotResponse(['I eat'], 'Sounds delicious! I wish I could eat too, but I am just a bot.');
    
-});
+});//
