@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { keywords: ['tell me about this profile'], answer: 'This is Molemo Mamashela\'s Personal Portfolio showcasing his skills, experience, and projects. It serves as an online resume, allowing visitors to get a deeper understanding of who he is and what he can do. The portfolio includes a Home, About Me, Services, Portfolio, and Contact Page.' },
         { keywords: ['Services'], answer: 'The Main Services that Molemo provides are Web Development, Mobile Development, and Backend Development. Extra services that he provides outside coding are IT Support. For more information, please turn to the Services Page.' },
         { keywords: ['Project'], answer: 'No projects have been published yet, but I can assure you, you will be contacted once they have been. Just fill the form on the contact page ;)' },
+    
     ];
 
     // Show the chatbot when the button is clicked
@@ -122,6 +123,56 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return 'I am not sure how to respond to that.';
     }
+
+    // Function to add Math problem  responses
+      // Generate a response from the chatbot
+       function getChatbotResponse(message) {
+        const lowerCaseMessage = message.toLowerCase();
+        for (const response of responses) {
+            for (const keyword of response.keywords) {
+                if (lowerCaseMessage.includes(keyword.toLowerCase ())) {
+                    return response.answer;
+                }
+            }
+        }
+        // Check if the message is a math problem
+        const processedMessage = preprocessMathMessage(lowerCaseMessage);
+        if (isMathProblem(processedMessage)) {
+            return solveMathProblem(processedMessage);
+        }
+        return 'I am not sure how to respond to that.';
+    }
+
+    // Function to preprocess the math message
+    function preprocessMathMessage(message) {
+        return message
+            .replace(/add/g, '+')
+            .replace(/subtract/g, '-')
+            .replace(/divide/g, '/')
+            .replace(/multiply/g, '*');
+    }
+
+    // Function to check if the message is a math problem
+    function isMathProblem(message) {
+        try {
+            math.evaluate(message);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
+
+    // Function to solve a math problem
+    function solveMathProblem(message) {
+        try {
+            const result = math.evaluate(message);
+            return `The answer is ${result}`;
+        } catch (error) {
+            return 'I am not sure how to solve that math problem.';
+        }
+    }
+
+ 
 
     // Function to add new responses
     function addChatbotResponse(keywords, answer) {
