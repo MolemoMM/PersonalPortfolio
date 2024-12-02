@@ -59,12 +59,23 @@ document.addEventListener('DOMContentLoaded', function() {
         { keywords: ['hello', 'hi', 'helo', 'sho','awe', 'hy'], answer: 'Hi there! How can I help you today?' },
         { keywords: ['how are you'], answer: 'I am just a bot, but I am doing great! How about you?' },
         { keywords: ['name'], answer: 'I am your friendly bot Ravyn.' },
+        { keywords: ['location'], answer: 'He Originates from vanderbijlpark, Gauteng but currently resides in Johannesburg, Gauteng.'},
         { keywords: ['contact'], answer: 'You can get in touch with Molemo by reaching him through Contact details: 064 315 6461 or Email Address: mamashelamolemo@gmail.com or navigate to the Contact Page for more information' },
         { keywords: ['about page'], answer: 'Molemo Mamashela is an aspiring software engineer from Johannesburg, Gauteng, with a passion for solving complex problems and creating innovative solutions through technology. Excited by the process of building systems from scratch. You can find out more about him by going through the About Page.' },
-        { keywords: ['tell me about this profile'], answer: 'This is Molemo Mamashela\'s Personal Portfolio showcasing his skills, experience, and projects. It serves as an online resume, allowing visitors to get a deeper understanding of who he is and what he can do. The portfolio includes a Home, About Me, Services, Portfolio, and Contact Page.' },
+        { keywords: ['profile'], answer: 'This is Molemo Mamashela\'s Personal Portfolio showcasing his skills, experience, and projects. It serves as an online resume, allowing visitors to get a deeper understanding of who he is and what he can do. The portfolio includes a Home, About Me, Services, Portfolio, and Contact Page.' },
         { keywords: ['Services'], answer: 'The Main Services that Molemo provides are Web Development, Mobile Development, and Backend Development. Extra services that he provides outside coding are IT Support. For more information, please turn to the Services Page.' },
         { keywords: ['Project'], answer: 'No projects have been published yet, but I can assure you, you will be contacted once they have been. Just fill the form on the contact page ;)' },
-    
+        { keywords: ['skills'], answer: 'Molemo has skills in various programming languages including JavaScript, C#, and Java. He is also proficient in frameworks such as Node.js, Firebase, and Django.' },
+        { keywords: ['experience'], answer: 'Molemo has experience working on multiple projects ranging from web development to mobile app development. He has worked with both startups and established companies.' },
+        { keywords: ['education'], answer: 'Molemo holds a National Diploma In Information Technology from the Centarl University of Technology. He has also completed online courses to further enhance his skills such as Cyber Threat Management.' },
+        { keywords: ['hobbies'], answer: 'In his free time, Molemo enjoys coding, reading tech blogs, and playing video games. He is also an avid traveler and loves exploring new places.' },
+        { keywords: ['LinkedIn','social media'], answer: 'You can follow Molemo on LinkedIn:http://www.linkedin.com/in/molemomamashela-19073624' },
+        { keywords: ['availability'], answer: 'Molemo is currently available for new projects and consultations. Feel free to reach out through the Contact Page.' },
+        { keywords: ['languages'], answer: 'Molemo speaks English and Sesotho fluently.' },
+        { keywords: ['CV'], answer: 'You can download Molemo\'s CV from the Resume Page to get a detailed overview of his skills, experience, and education.' },
+        { keywords: ['certifications'], answer: 'Molemo has earned certifications in web development, mobile development, and cloud computing. You can find more details on the Certifications Page.' },
+        { keywords: ['partnerships'], answer: 'Molemo is open to partnerships and collaborations. If you have a project in mind, reach out through the Contact Page.' },
+        { keywords: ['support'], answer: 'If you need support or have any questions, feel free to reach out through the Contact Page..' }
     ];
 
     // Show the chatbot when the button is clicked
@@ -80,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Send a message
-    sendChatbot.addEventListener('click', function() {
+    function sendMessage() {
         const message = chatbotInput.value;
         if (message.trim() !== '') {
             addMessage('You', message);
@@ -100,6 +111,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 addMessage('Chatbot', response);
             }, 1000);
         }
+    }
+
+    sendChatbot.addEventListener('click', sendMessage);
+
+    // Send message on Enter key press
+    chatbotInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
     });
 
     // Add a message to the chat
@@ -117,20 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
         for (const response of responses) {
             for (const keyword of response.keywords) {
                 if (lowerCaseMessage.includes(keyword.toLowerCase())) {
-                    return response.answer;
-                }
-            }
-        }
-        return 'I am not sure how to respond to that.';
-    }
-
-    // Function to add Math problem  responses
-      // Generate a response from the chatbot
-       function getChatbotResponse(message) {
-        const lowerCaseMessage = message.toLowerCase();
-        for (const response of responses) {
-            for (const keyword of response.keywords) {
-                if (lowerCaseMessage.includes(keyword.toLowerCase ())) {
                     return response.answer;
                 }
             }
@@ -171,8 +177,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return 'I am not sure how to solve that math problem.';
         }
     }
-
- 
 
     // Function to add new responses
     function addChatbotResponse(keywords, answer) {
