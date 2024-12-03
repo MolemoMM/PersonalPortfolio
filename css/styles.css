@@ -892,10 +892,9 @@ form .submit-btn:hover {
 
 #chatbot-controls {
     display: flex;
-  
     align-items: center;
-    gap: 100px; /* Space between buttons */
-    margin-top: 10px;
+    gap: 75px; /* Space between buttons */
+    margin-top: 5px;
     
 }
 
