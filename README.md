@@ -3,15 +3,6 @@ Website Link: https://molemomm.github.io/PersonalPortfolio/
 <h3 align="left">Languages and Tools used in this project:</h3>
 <p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
 
-# How to clone the repository to your local
-- **Install Git**
-- **Copy the repository URL**: https://github.com/MolemoMM/PersonalPortfolio
-- **Open the command prompt**
-- **Clone the repository**
-- **Navigate to the repository**
-- **Check if it’s the correct repository**
-- **You’re now ready to start working on the repository**
-
 # To make the most out of your conversation with this chatbot, here are a few suggestions on how you can interact:
 - **Greetings: Start with a "hello","hy","sho" , "awe" or similar to get a friendly response.**
 - **Personal Info: Ask about the bot’s name or location for details about it.**
@@ -23,10 +14,14 @@ Website Link: https://molemomm.github.io/PersonalPortfolio/
 - **Social Media: Get Molemo's LinkedIn.**
 - **Additional Info: Refer to the "About Page" for more information on Molemo's background.**
 
-
-### Connect With Me:
-
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/molemo-mamashela/)
+# How to clone the repository to your local
+- **Install Git**
+- **Copy the repository URL**: https://github.com/MolemoMM/PersonalPortfolio
+- **Open the command prompt**
+- **Clone the repository**
+- **Navigate to the repository**
+- **Check if it’s the correct repository**
+- **You’re now ready to start working on the repository**
 
 
 # Personal Portfolio
@@ -166,4 +161,10 @@ The [`scrips/jason.js`](scrips/jason.js ) file contains JavaScript code that man
 
 This project is licensed under the terms specified by the author, Molemo Mamashela. All rights reserved.
 
-Similar code found with 2 license types
+### Connect With Me:
+
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](: http://
+www.linkedin.com/in/molemomamashela-190736244)
+
+
+
