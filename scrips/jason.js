@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatbotMessages = document.getElementById('chatbot-messages');
     const chatbotInput = document.getElementById('chatbot-input');
     const sendChatbot = document.getElementById('send-chatbot');
+    const clearChatbot = document.getElementById('clear-chatbot'); // New clear button
     let chatStarted = false;
 
     // Predefined responses
@@ -63,16 +64,16 @@ document.addEventListener('DOMContentLoaded', function() {
         { keywords: ['personal'], answer: 'Molemo is originally from Vanderbijlpark,Gauteng studied at Suncrest High School and loves pizza' },
         { keywords: ['location'], answer: 'He Originates from vanderbijlpark, Gauteng but currently resides in Johannesburg, Gauteng.'},
         { keywords: ['contact'], answer: 'You can get in touch with Molemo by reaching him through Contact details: 064 315 6461 or Email Address: mamashelamolemo@gmail.com or navigate to the Contact Page for more information' },
-        { keywords: ['about page'], answer: 'Molemo Mamashela is an aspiring software engineer from Johannesburg, Gauteng, with a passion for solving complex problems and creating innovative solutions through technology. Excited by the process of building systems from scratch. You can find out more about him by going through the About Page.' },
+        { keywords: ['about page', 'about'], answer: 'Molemo Mamashela is an aspiring software engineer from Johannesburg, Gauteng, with a passion for solving complex problems and creating innovative solutions through technology. Excited by the process of building systems from scratch. You can find out more about him by going through the About Page.' },
         { keywords: ['profile'], answer: 'This is Molemo Mamashela\'s Personal Portfolio showcasing his skills, experience, and projects. It serves as an online resume, allowing visitors to get a deeper understanding of who he is and what he can do. The portfolio includes a Home, About Me, Services, Portfolio, and Contact Page.' },
         { keywords: ['Services'], answer: 'The Main Services that Molemo provides are Web Development, Mobile Development, and Backend Development. Extra services that he provides outside coding are IT Support. For more information, please turn to the Services Page.' },
-        { keywords: ['Project'], answer: 'No projects have been published yet, but I can assure you, you will be contacted once they have been. Just fill the form on the contact page ;)' },
-        { keywords: ['skills'], answer: 'Molemo has skills in various programming languages including JavaScript, C#, and Java. He is also proficient in frameworks such as Node.js, Firebase, and Django.' },
+        { keywords: ['Project','projects'], answer: 'No projects have been published yet, but I can assure you, you will be contacted once they have been. Just fill the form on the contact page ;)' },
+        { keywords: ['skills', 'skill'], answer: 'Molemo has skills in various programming languages including JavaScript, C#, and Java. He is also proficient in frameworks such as Node.js, Firebase, and Django.' },
         { keywords: ['experience'], answer: 'Molemo has experience working on multiple projects ranging from web development to mobile app development. He has worked with both startups and established companies.' },
-        { keywords: ['education'], answer: 'Molemo holds a National Diploma In Information Technology from the Centarl University of Technology. He has also completed online courses to further enhance his skills such as Cyber Threat Management.' },
+        { keywords: ['education', 'study'], answer: 'Molemo holds a National Diploma In Information Technology from the Centarl University of Technology. He has also completed online courses to further enhance his skills such as Cyber Threat Management.' },
         { keywords: ['hobbies'], answer: 'In his free time, Molemo enjoys coding, reading tech blogs, and playing video games. He is also an avid traveler and loves exploring new places.' },
         { keywords: ['LinkedIn','social media'], answer: 'You can follow Molemo on LinkedIn:http://www.linkedin.com/in/molemomamashela-19073624' },
-        { keywords: ['availability'], answer: 'Molemo is currently available for new projects and consultations. Feel free to reach out through the Contact Page.' },
+        { keywords: ['availability','available'], answer: 'Molemo is currently available for new projects and consultations. Feel free to reach out through the Contact Page.' },
         { keywords: ['languages'], answer: 'Molemo speaks English and Sesotho fluently.' },
         { keywords: ['CV'], answer: 'You can download Molemo\'s resume from the Resume Page to get a detailed overview of his skills, experience, and education.' },
         { keywords: ['certifications'], answer: 'Molemo has earned certifications in web development, mobile development, and cloud computing. You can find more details on the Certifications Page.' },
@@ -91,6 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
     closeChatbot.addEventListener('click', function() {
         chatbot.style.display = 'none';
         chatbotButton.style.display = 'flex';
+    });
+
+    // Clear chat history
+    clearChatbot.addEventListener('click', function() {
+        chatbotMessages.innerHTML = '';
+        chatStarted = false;
+        showGreeting();
     });
 
     // Show greeting animation
@@ -214,4 +222,4 @@ document.addEventListener('DOMContentLoaded', function() {
     addChatbotResponse(['eat'], 'I do not eat, though I am powered by electricity. What do you eat?');
     addChatbotResponse(['I eat'], 'Sounds delicious! I wish I could eat too, but I am just a bot.');
    
-});//
+});

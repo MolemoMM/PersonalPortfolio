@@ -888,6 +888,30 @@ form .submit-btn:hover {
 .message:nth-child(odd) {
     background-color: var(--second-bg-color);
 }
+
+
+#chatbot-controls {
+    display: flex;
+  
+    align-items: center;
+    gap: 100px; /* Space between buttons */
+    margin-top: 10px;
+    
+}
+
+#send-chatbot, #clear-chatbot {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--second-bg-color);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#send-chatbot:hover, #clear-chatbot:hover {
+    background-color: var(--main-color);
+}
  
 /* thinking indicator */
 
