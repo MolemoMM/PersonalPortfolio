@@ -12,6 +12,21 @@ Website Link: https://molemomm.github.io/PersonalPortfolio/
 - **Check if it’s the correct repository**
 - **You’re now ready to start working on the repository**
 
+# To make the most out of your conversation with this chatbot, here are a few suggestions on how you can interact:
+- **Greetings: Start with a "hello","hy","sho" , "awe" or similar to get a friendly response.**
+- **Personal Info: Ask about the bot’s name or location for details about it.**
+- **Services: Inquire about the services offered, like web or mobile development.**
+- **Projects: Ask about upcoming or published projects.**
+- **Experience & Skills: Learn about Molemo’s professional experience and technical skills.**
+- **Contact & Availability: Request contact details or check Molemo’s availability for new projects.**
+- **Educational Background: Ask about Molemo’s education and certifications.**
+- **Social Media: Get Molemo's LinkedIn.**
+- **Additional Info: Refer to the "About Page" for more information on Molemo's background.**
+
+
+### Connect With Me:
+
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/molemo-mamashela/)
 
 
 # Personal Portfolio
@@ -146,11 +161,6 @@ The [`css/styles.css`](css/styles.css ) file defines the styling for various sec
 ## [`scrips/jason.js`](scrips/jason.js )
 
 The [`scrips/jason.js`](scrips/jason.js ) file contains JavaScript code that manages the behavior of a webpage's menu and a typing animation effect. It includes an event listener for toggling the menu's open state when a specific element is clicked. Additionally, it has a scroll event listener that ensures the menu is closed when the user scrolls the page. The file also initializes a typing animation using the Typed.js library, which cycles through the strings "Backend Developer" and "Mobile app Developer" with specified typing and backspacing speeds, and loops the animation indefinitely. This script enhances the interactivity and dynamic content of the webpage.
-
-## How to Run
-
-1. Open [`index.html`](index.html ) in a web browser to view the personal portfolio website.
-2. Ensure that the [`css/styles.css`](css/styles.css ) and [`scrips/jason.js`](scrips/jason.js ) files are correctly linked and available in their respective directories.
 
 ## License
 

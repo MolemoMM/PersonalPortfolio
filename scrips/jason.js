@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { keywords: ['hello', 'hi', 'helo', 'sho','awe', 'hy'], answer: 'Hi there! How can I help you today?' },
         { keywords: ['how are you'], answer: 'I am just a bot, but I am doing great! How about you?' },
         { keywords: ['name'], answer: 'I am your friendly bot Ravyn.' },
+        { keywords: ['personal'], answer: 'Molemo is originally from Vanderbijlpark,Gauteng studied at Suncrest High School and loves pizza' },
         { keywords: ['location'], answer: 'He Originates from vanderbijlpark, Gauteng but currently resides in Johannesburg, Gauteng.'},
         { keywords: ['contact'], answer: 'You can get in touch with Molemo by reaching him through Contact details: 064 315 6461 or Email Address: mamashelamolemo@gmail.com or navigate to the Contact Page for more information' },
         { keywords: ['about page'], answer: 'Molemo Mamashela is an aspiring software engineer from Johannesburg, Gauteng, with a passion for solving complex problems and creating innovative solutions through technology. Excited by the process of building systems from scratch. You can find out more about him by going through the About Page.' },
