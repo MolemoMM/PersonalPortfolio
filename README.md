@@ -24,11 +24,6 @@ Website Link: https://molemomm.github.io/PersonalPortfolio/
 - **Additional Info: Refer to the "About Page" for more information on Molemo's background.**
 
 
-### Connect With Me:
-
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/molemo-mamashela/)
-
-
 # Personal Portfolio
 This project is my personal portfolio website designed to showcase my work and contact information. Below is a detailed description of each file and its purpose within the project.
 
@@ -166,4 +161,10 @@ The [`scrips/jason.js`](scrips/jason.js ) file contains JavaScript code that man
 
 This project is licensed under the terms specified by the author, Molemo Mamashela. All rights reserved.
 
-Similar code found with 2 license types
+### Connect With Me:
+
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](: http://
+www.linkedin.com/in/molemomamashela-190736244)
+
+
+
