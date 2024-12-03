@@ -868,7 +868,7 @@ form .submit-btn:hover {
 #close-chatbot {
     background: none;
     border: none;
-    color: white;
+    color: var(--main-color);
     font-size: 16px;
     cursor: pointer;
 }
