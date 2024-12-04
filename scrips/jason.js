@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { keywords: ['Services'], answer: 'The Main Services that Molemo provides are Web Development, Mobile Development, and Backend Development. Extra services that he provides outside coding are IT Support. For more information, please turn to the Services Page.' },
         { keywords: ['Project','projects'], answer: 'No projects have been published yet, but I can assure you, you will be contacted once they have been. Just fill the form on the contact page ;)' },
         { keywords: ['skills', 'skill'], answer: 'Molemo has skills in various programming languages including JavaScript, C#, and Java. He is also proficient in frameworks such as Node.js, Firebase, and Django.' },
-        { keywords: ['experience'], answer: 'Molemo has experience working on multiple projects ranging from web development to mobile app development. He has worked with both startups and established companies.' },
+        { keywords: ['experience'], answer: 'Molemo has worked at Capaciti as "DevOps Candidate" for The Company "Wipro" of which both are established companies.' },
         { keywords: ['education', 'study'], answer: 'Molemo holds a National Diploma In Information Technology from the Centarl University of Technology. He has also completed online courses to further enhance his skills such as Cyber Threat Management.' },
         { keywords: ['hobbies'], answer: 'In his free time, Molemo enjoys coding, reading tech blogs, and playing video games. He is also an avid traveler and loves exploring new places.' },
         { keywords: ['LinkedIn','social media'], answer: 'You can follow Molemo on LinkedIn:http://www.linkedin.com/in/molemomamashela-19073624' },
