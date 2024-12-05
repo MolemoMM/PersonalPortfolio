@@ -69,10 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
         { keywords: ['Services'], answer: 'The Main Services that Molemo provides are Web Development, Mobile Development, and Backend Development. Extra services that he provides outside coding are IT Support. For more information, please turn to the Services Page.' },
         { keywords: ['Project','projects'], answer: 'No projects have been published yet, but I can assure you, you will be contacted once they have been. Just fill the form on the contact page ;)' },
         { keywords: ['skills', 'skill'], answer: 'Molemo has skills in various programming languages including JavaScript, C#, and Java. He is also proficient in frameworks such as Node.js, Firebase, and Django.' },
-        { keywords: ['experience'], answer: 'Molemo has worked at Capaciti as "DevOps Candidate" for The Company "Wipro" of which both are established companies.' },
+        { keywords: ['experience', 'work'], answer: 'Molemo currently works at Capaciti as "DevOps Candidate" for The Company "Wipro" of which both are established companies.' },
         { keywords: ['education', 'study'], answer: 'Molemo holds a National Diploma In Information Technology from the Centarl University of Technology. He has also completed online courses to further enhance his skills such as Cyber Threat Management.' },
-        { keywords: ['hobbies'], answer: 'In his free time, Molemo enjoys coding, reading tech blogs, and playing video games. He is also an avid traveler and loves exploring new places.' },
-        { keywords: ['LinkedIn','social media'], answer: 'You can follow Molemo on LinkedIn:http://www.linkedin.com/in/molemomamashela-19073624' },
+        { keywords: ['hobbies'], answer: 'In his free time, Molemo enjoys coding, watching football. He is also an avid traveler and loves exploring new places.' },
+        { keywords: ['LinkedIn',], answer: 'You can connect with Molemo on LinkedIn: http://www.linkedin.com/in/molemomamashela-19073624' },
+        { keywords: ['GitHub'], answer: 'You can follow Molemo on GitHub: https://github.com/MolemoMM/MolemoMM' },
         { keywords: ['availability','available'], answer: 'Molemo is currently available for new projects and consultations. Feel free to reach out through the Contact Page.' },
         { keywords: ['languages'], answer: 'Molemo speaks English and Sesotho fluently.' },
         { keywords: ['CV'], answer: 'You can download Molemo\'s resume from the Resume Page to get a detailed overview of his skills, experience, and education.' },
@@ -215,11 +216,6 @@ document.addEventListener('DOMContentLoaded', function() {
         responses.push({ keywords: keywords.map(keyword => keyword.toLowerCase()), answer: answer });
     }
 
-    // Example of adding a new response
-    addChatbotResponse(['favorite color'], 'I love all colors equally!');
-    addChatbotResponse(['joke'], 'Why don’t scientists trust atoms? Because they make up everything!');
-    addChatbotResponse(['Programmed'], 'I was programmed in Braamfontein, Johannesburg, South Africa by Molemo Mamashela.');
-    addChatbotResponse(['eat'], 'I do not eat, though I am powered by electricity. What do you eat?');
-    addChatbotResponse(['I eat'], 'Sounds delicious! I wish I could eat too, but I am just a bot.');
+  
    
 });
