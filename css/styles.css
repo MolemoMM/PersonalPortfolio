@@ -776,23 +776,23 @@ form .submit-btn:hover {
 
 /* chatbot */
 #chatbot-button {
-    position: fixed;
+    position: fixed;  /* Fixes the button's position on the screen */
     bottom: 20px;
     right: 20px;
     background-color: var(--main-color);
     color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes the button circular */
     width: 60px;
     height: 60px;
     font-size: 24px;
     cursor: pointer;
-    display: flex;
+    display: flex; /* Uses flexbox for centering content */
     justify-content: center;
-    align-items: center;
+    align-items: center;  /* Centers content vertically */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-    animation: bounce 2s infinite;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Adds transition effects */
+    animation: bounce 2s infinite; /* Adds a bouncing animation */
 }
 
 #chatbot-button:hover {
@@ -928,6 +928,7 @@ form .submit-btn:hover {
     animation: dots 1s steps(5, end) infinite;
 }
 
+/* Keyframes for animation */
 @keyframes dots {
     0%, 20% {
         color: rgba(0,0,0,0);
