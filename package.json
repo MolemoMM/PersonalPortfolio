@@ -1,0 +1,17 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "author": "Molemo Mamashela",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
