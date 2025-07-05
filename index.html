@@ -24,15 +24,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,
     FILL,GRAD@48,400,0,0 ">
-    <link rel="stylesheet" href="chatbot.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    
 </head>
 
-  
-</head>
-<body class=>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-animation">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+                <div class="shape shape-7"></div>
+                <div class="shape shape-8"></div>
+            </div>
+            <div class="gradient-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+                <div class="orb orb-4"></div>
+            </div>
+            <div class="mesh-gradient"></div>
+            <div class="particle-field">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
     
 
      <!--- header -->
@@ -94,39 +137,111 @@
 
       <!--- About Section -->
       <section class="about" id="about">
-        <div class="about-img">
-            <img src="images/lemo.jpeg">
-        </div>
-        <div class="about-text">
-            <a href="#" class="h-line">
-                <i class="ri-shining-2-line"></i>
-                <span>About!</span>
-            </a>
-            <h2>More <span>About Me</span></h2>
-            <h5>
-                <p>Hello! I'm Molemo Mamashela, an aspiring software engineer based in Johannesburg, Gauteng.
-                I enjoy soloving complex problems and working with technology to create innovative solutions.The idea of building something from scratch,whether its a simple app
-                or a complex system exicites me. I enjoy the logical thinkingn and creativity that coding requires and Im always eager to learn new languages like C and PHP aswell as frameworks such as Angular or Spring.
-                Additionally, using powerful tools like Git for version control, Docker for containerization, and Jekins for continous intergration is something i find 
-                fascinating. Software engineering offers endless opportunities for growth, and I am drawn to the challeng of constantly improving and adapting.
+        <div class="about-container">
+            <!-- Header Info - Above everything -->
+            <div class="about-header">
+                <a href="#" class="h-line">
+                    <i class="ri-shining-2-line"></i>
+                    <span>About Me</span>
+                </a>
+                <h2>Passionate <span>Software Engineer</span></h2>
+                <p class="header-intro">Hello! I'm <strong>Molemo Mamashela</strong>, an aspiring software engineer based in <em>Johannesburg, Gauteng</em>. I'm passionate about solving complex problems and working with technology to create innovative solutions.</p>
+            </div>
+            
+            <!-- Main Content Area -->
+            <div class="about-main">
+                <div class="about-img">
+                    <div class="img-wrapper">
+                        <img src="images/lemo.jpeg" alt="Molemo Mamashela">
+                        <div class="img-overlay">
+                            <div class="overlay-content">
+                                <i class="ri-user-3-line"></i>
+                                <span>Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-badges">
+                        <div class="badge badge-1">
+                            <i class="ri-code-line"></i>
+                            <span>Developer</span>
+                        </div>
+                        <div class="badge badge-2">
+                            <i class="ri-palette-line"></i>
+                            <span>Creative</span>
+                        </div>
+                        <div class="badge badge-3">
+                            <i class="ri-rocket-line"></i>
+                            <span>Innovative</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-info">
+                    <!-- Skills and Stats aligned with picture -->
+                    <div class="skills-stats-container">
+                        <div class="skills-highlight">
+                            <div class="skill-item">
+                                <i class="ri-computer-line"></i>
+                                <div>
+                                    <h4>Full-Stack Development</h4>
+                                    <p>Building end-to-end solutions</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="ri-brain-line"></i>
+                                <div>
+                                    <h4>Problem Solving</h4>
+                                    <p>Creative approaches to challenges</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="ri-team-line"></i>
+                                <div>
+                                    <h4>Team Collaboration</h4>
+                                    <p>Effective teamwork & communication</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-stats">
+                            <div class="stat-item">
+                                <h3>0-1</h3>
+                                <p>Experince</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>5+</h3>
+                                <p>Technologies</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>5+</h3>
+                                <p>Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Content - Horizontal -->
+            <div class="about-bottom">
+                <p class="detailed-text">
+                    I enjoy building from scratch and learning new technologies like <strong>C#</strong>, <strong>Java</strong>, 
+                    <strong>React</strong>, and <strong>Spring</strong>. I'm fascinated by tools like <strong>Kubernets</strong>, 
+                    <strong>Docker</strong>, <strong>Terraform</strong> and <strong>Jenkins</strong> for modern development workflows.
                 </p>
-        </h5>
-          
+                
                 <div class="h-btn">
                     <a href="#contact" class="btn1">
+                        <i class="ri-user-add-line"></i>
                         Hire Me
-                        <i class="ri-arrow-right-line"></i>
                     </a>
     
                     <a href="./images/Molemo CV.pdf" class="btn2" download>
-                        Download CV
                         <i class="ri-download-2-line"></i>
+                        Download CV
                     </a>
-    
-    
                 </div>
+            </div>
         </div>
-
       </section>
 
       <!--- Services -->
@@ -163,8 +278,7 @@
                     <i class="fa-brands fa-android"></i>
                     <h2>Mobile Developer</h2>
                     <p>
-                        As a mobile app developer, I’ve gained expertise in both native and cross-platform development, mastering languages like Dart for building high-performance apps on Android and iOS. 
-                        I’m proficient in designing user-friendly interfaces by following platform-specific guidelines and leveraging tools like Figma and Canva.
+                        As a mobile app developer, I’ve gained expertise in both native and cross-platform development, mastering languages like Dart for building high-performance apps on Android. 
                         <span class="more-text"><br><br>I’ve developed strong skills in integrating APIs, working with cloud services like Firebase, and ensuring smooth app performance through optimization techniques.</span>
                     </p>
                     <button class="read-more-btn">Read more</button>
@@ -180,7 +294,7 @@
                     <i class="ri-github-fill"></i>
                     <h2>Backend Developer</h2>
                     <p>As a backend developer, I focus on building the server-side components of web applications. My job involves designing, implementing, and maintaining the systems that handle the logic, databases, and application programming interfaces (APIs) that power the user-facing features. 
-                        I work with server-side languages like Java, Python, C#, and often work with databases such as MySQL, or NoSQL options like SQL Lite.
+                        I work with server-side languages like Java, C#, and often work with databases such as MongoDB, or NoSQL options like Firebase.
                         <span class="more-text"><br><br>A big part of what I do is making sure that data is processed efficiently and securely, ensuring that the user experience on the front end remains smooth. I collaborate closely with frontend developers to ensure that the data being sent to and from the server is properly formatted and accessible. 
                         I also focus on writing clean, scalable, and maintainable code, as performance and reliability are key in any backend system.</span>
                     </p>
@@ -318,31 +432,25 @@
 
     <!-- Chatbot Floating Button -->
     <button id="chatbot-button">
-        <i class="material-icons">smart_toy</i>
+        <i class="ri-robot-2-line"></i>
     </button>
 
     <!-- Chatbot -->
     <div id="chatbot">
         <div id="chatbot-header">
-            <h3>Rayvn<i class="ri-robot-2-line"></i></h3>
-            <button id="close-chatbot">X</button>
+            <h3><i class="ri-robot-2-line"></i> Ravyn AI Assistant</h3>
+            <button id="close-chatbot">✕</button>
         </div>
         <div id="chatbot-messages"></div>
-        <input type="text" id="chatbot-input" placeholder="Type a message...">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything about Molemo...">
         <div id="chatbot-controls">
-            <button id="send-chatbot">Send</button>
-            <button id="clear-chatbot">Clear<i class="ri-chat-delete-fill"></i></button>
+            <button id="send-chatbot"><i class="ri-send-plane-fill"></i> Send</button>
+            <button id="clear-chatbot"><i class="ri-delete-bin-line"></i> Clear</button>
         </div>
     </div>
 
-    <!-- Link to chatbot CSS -->
-    <link rel="stylesheet" href="chatbot.css">
-
-    <!-- Link to chatbot JavaScript -->
-    <script src="chatbot.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
 
-   
-
+    </div> <!-- Close main-content wrapper -->
 </body>
 </html>
