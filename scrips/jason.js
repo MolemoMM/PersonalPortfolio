@@ -204,15 +204,102 @@ window.addEventListener("scroll",function() {
 let menu = document.querySelector('#menu-icon');
 let menulist = document.querySelector('.menulist');
 
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    menulist.classList.toggle('open');
-};
-window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    menulist.classList.remove('open');
+// Enhanced mobile menu functionality
+function closeMobileMenu() {
+    if (menu && menulist) {
+        menu.classList.remove('bx-x');
+        menulist.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+}
 
+function toggleMobileMenu() {
+    if (menu && menulist) {
+        menu.classList.toggle('bx-x');
+        menulist.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    }
+}
+
+// Close mobile menu when clicking on menu items
+document.querySelectorAll('.menulist a').forEach(link => {
+    link.addEventListener('click', () => {
+        closeMobileMenu();
+    });
+});
+
+// Toggle mobile menu on icon click
+if (menu) {
+    menu.addEventListener('click', toggleMobileMenu);
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (menulist && menulist.classList.contains('active')) {
+        if (!menulist.contains(e.target) && !menu.contains(e.target)) {
+            closeMobileMenu();
+        }
+    }
+});
+
+// Close mobile menu when window resizes
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 968) {
+        closeMobileMenu();
+    }
+});
+
+// Close mobile menu on scroll (with debounce)
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        if (menulist && menulist.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    }, 100);
+});
+
+// Handle escape key to close mobile menu
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menulist && menulist.classList.contains('active')) {
+        closeMobileMenu();
+    }
+});
+
+// Prevent body scroll when mobile menu is open
+const preventBodyScroll = () => {
+    if (document.body.classList.contains('menu-open')) {
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${window.scrollY}px`;
+        document.body.style.width = '100%';
+    } else {
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
 };
+
+// Observer for menu state changes
+const menuObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            if (document.body.classList.contains('menu-open')) {
+                preventBodyScroll();
+            } else {
+                preventBodyScroll();
+            }
+        }
+    });
+});
+
+// Start observing body class changes
+menuObserver.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+});
 
 var typed = new Typed(".input",{
     strings:[
@@ -281,14 +368,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show the chatbot when the button is clicked
     chatbotButton.addEventListener('click', function() {
-        chatbot.style.display = 'flex';
+        chatbot.classList.add('active');
         chatbotButton.style.display = 'none';
         showGreeting();
     });
 
     // Close the chatbot
     closeChatbot.addEventListener('click', function() {
-        chatbot.style.display = 'none';
+        chatbot.classList.remove('active');
         chatbotButton.style.display = 'flex';
     });
 
@@ -302,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show greeting animation
     function showGreeting() {
         const greetingElement = document.createElement('div');
-        greetingElement.classList.add('chatbot-message', 'bot-message', 'greeting');
+        greetingElement.classList.add('message', 'bot', 'greeting');
         greetingElement.innerHTML = '👋 Hello! I\'m Ravyn, Molemo\'s AI assistant. I can help you learn more about his skills, projects, and experience. What would you like to know?';
         chatbotMessages.appendChild(greetingElement);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
@@ -321,8 +408,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Show thinking indicator
             const thinkingIndicator = document.createElement('div');
-            thinkingIndicator.classList.add('chatbot-message', 'bot-message', 'thinking-indicator');
-            thinkingIndicator.innerHTML = '<i class="fa-solid fa-gear"></i> Processing Input...';
+            thinkingIndicator.classList.add('typing-indicator');
+            thinkingIndicator.innerHTML = '<div class="typing-dots"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
             chatbotMessages.appendChild(thinkingIndicator);
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 
@@ -351,10 +438,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Add appropriate class based on sender
         if (sender === 'You') {
-            messageElement.classList.add('user-message');
+            messageElement.classList.add('user');
             messageElement.innerHTML = `${message}`;
         } else {
-            messageElement.classList.add('bot-message');
+            messageElement.classList.add('bot');
             messageElement.innerHTML = `${message}`;
         }
         
@@ -742,5 +829,74 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     });
 });
+
+// Mobile-specific enhancements
+function initializeMobileEnhancements() {
+    // Add viewport height fix for mobile browsers
+    function setVhProperty() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    setVhProperty();
+    window.addEventListener('resize', setVhProperty);
+    window.addEventListener('orientationchange', () => {
+        setTimeout(setVhProperty, 100);
+    });
+    
+    // Improve touch scrolling on iOS
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        document.body.style.webkitOverflowScrolling = 'touch';
+    }
+    
+    // Prevent zoom on input focus for iOS
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.style.fontSize = '16px';
+        });
+    });
+    
+    // Add smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Handle mobile menu better
+    if (window.innerWidth <= 968) {
+        // Ensure menu icon is visible
+        if (menu) {
+            menu.style.display = 'block';
+        }
+        
+        // Add touch event handling
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            // Swipe left to close menu if it's open
+            if (diff > swipeThreshold && menulist && menulist.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        }
+    }
+}
+
+// Initialize mobile enhancements when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeMobileEnhancements);
+} else {
+    initializeMobileEnhancements();
+}
 
 // ===== END ENHANCED INTERACTIVE EFFECTS =====
